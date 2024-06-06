@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="task"/>
+<button onclick="addTodo()">ADD</button>
+<div id="newtask"></div>
+
+<script>
+    function addTodo() {
+        const test = document.getElementById("task").value
+        const newtask = document.getElementById("newtask")
+
+        const newtodo = document.createElement("div")
+
+        const tt = document.createElement("div")
+
+        tt.innerHTML = test
+
+        const del = document.createElement("button")
+        del.innerText = "Delete"
+        del.onclick = () => {
+            newtask.removeChild(newtodo)
+        }
+        newtodo.append(tt)
+        newtodo.append(del)
+        newtask.append(newtodo)
+    }
+</script>
+
+</body>
+</html>

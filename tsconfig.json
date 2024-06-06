@@ -6,6 +6,10 @@
       "dom.iterable",
       "esnext"
     ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/react-transition-group.d.ts" // путь к файлу объявлений
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
